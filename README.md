@@ -1,4 +1,4 @@
 doctest
 =======
 
-sphinx doc test
+simple sphinx doc test
