@@ -1,6 +1,6 @@
 digraph G
 {
-    graph [fontname=Helvetica]
+    graph [fontname=Helvetica, bgcolor="transparent"]
     node [fontname=Helvetica, shape=plaintext, style=filled, color="#E0E4CC"];
     edge [fontname=Helvetica, arrowhead=normal, arrowtail=dot, color="#FA6900"];
 
