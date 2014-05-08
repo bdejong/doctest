@@ -7,6 +7,11 @@ Contents:
    :maxdepth: 2
    
    another
+   
+Let's try something wild...
+---------------------------
+
+.. graphviz:: dot/example.dot
 
 Indices and tables
 ==================

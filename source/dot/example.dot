@@ -1,0 +1,58 @@
+digraph G
+{
+    graph [fontname=Helvetica]
+    node [fontname=Helvetica, shape=plaintext, style=filled, color="#E0E4CC"];
+    edge [fontname=Helvetica, arrowhead=normal, arrowtail=dot, color="#FA6900"];
+
+    rankdir=LR;
+    {
+        rank=source;
+        TTTT;
+        SSSCCC;
+    }
+  
+    label = "Step 42"
+    
+    subgraph cluster_auth {
+		label = "A backend";
+        p1 [label="A cache"];
+        p2 [label="A cache"];
+        p3 [label="A cache"];
+        p4 [label="A cache"];
+        p5 [label="A cache"];
+		{p1 p2 p3 p4 p5} -> NIID;
+        spread [label="", fillcolor="#A7DBD8"; style=filled; shape=circle, fixedsize=true, width=0.1]
+        spread -> {p1 p2 p3 p4 p5} [style=dotted];
+        graph[style=dashed, color="#A7DBD8"];
+	}
+    
+    subgraph cluster_MMMM {
+		label = "MSB";
+        spread2 [label="infrastructure"]
+        graph[style=dashed, color="#A7DBD8"];
+	}
+
+    subgraph cluster_LM {
+		label = "LMB";
+        LM [label="LM"];
+        graph[style=dashed, color="#A7DBD8"];
+	}
+
+    subgraph cluster_APAPAPAP {
+		label = "Some Top Layer";
+        AUAUAU;
+        MMMM;
+        RRRR [label="r/a"];
+    }
+    
+    TTTT [label="App1", style=filled, fillcolor="#69D2E7"];
+    SSSCCC [label="App2", style=filled, fillcolor="#69D2E7"];
+    
+    TTTT -> AUAUAU;
+    TTTT -> MMMM;
+    MMMM -> spread2;
+    AUAUAU -> spread;
+    SSSCCC -> RRRR;
+    SSSCCC -> AUAUAU;
+    RRRR -> LM;
+}
